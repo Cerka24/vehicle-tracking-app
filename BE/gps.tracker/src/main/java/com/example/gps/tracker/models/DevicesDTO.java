@@ -1,6 +1,5 @@
 package com.example.gps.tracker.models;
 
-import com.example.gps.tracker.models.entities.User;
 import lombok.Data;
 
 @Data
