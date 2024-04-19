@@ -2,10 +2,9 @@ package com.example.gps.tracker.services;
 
 import com.example.gps.tracker.models.UserDTO;
 import com.example.gps.tracker.models.entities.User;
-import com.example.gps.tracker.repositories.AuthenticationRepository;
+import com.example.gps.tracker.repositories.UserRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.security.MessageDigest;
@@ -14,10 +13,10 @@ import java.security.NoSuchAlgorithmException;
 @Service
 public class AuthenticationService {
 
-    private final AuthenticationRepository authenticationRepository;
+    private final UserRepository userRepository;
 
-    public AuthenticationService(AuthenticationRepository authenticationRepository) {
-        this.authenticationRepository = authenticationRepository;
+    public AuthenticationService(UserRepository userRepository) {
+        this.userRepository = userRepository;
     }
 
     public User registerNewUser(UserDTO userDTO) {
@@ -34,7 +33,7 @@ public class AuthenticationService {
         user.setUsername(userDTO.getUserName());
         user.setPassword(hashedPass);
 
-        authenticationRepository.save(user);
+        userRepository.save(user);
 
         return user;
     }
@@ -42,7 +41,7 @@ public class AuthenticationService {
     public User logInUser(UserDTO userDTO) {
         try {
             String hashedPass = encryptPassword(userDTO.getPassword());
-            User user = authenticationRepository.findByUsernameAndPassword(userDTO.getUserName(), hashedPass);
+            User user = userRepository.findByUsernameAndPassword(userDTO.getUserName(), hashedPass);
 
             if (user == null) {
                 throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Invalid credentials provided");

@@ -17,16 +17,24 @@ import java.sql.Timestamp;
 public class Coordinates {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "coordinates_id")
-    private Long coordinatesId;
+    private Long id;
+
     @Column(name = "latitude")
     private Double lat;
+
     @Column(name = "longitude")
     private Double lon;
+
     @Column(name = "speed")
     private Double speed;
+
     @Column(name = "timestamp")
     private Timestamp timestamp;
+
     @Column(name = "user_id")
-    private Integer usersId;
+    private Long usersId;
+
+    @ManyToOne
+    @JoinColumn(name = "device_id")
+    private Devices device;
 }

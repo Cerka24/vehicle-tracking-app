@@ -15,13 +15,21 @@ import lombok.Setter;
 public class Devices {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long device_id;
+    private Long id;
+
     @Column(name = "max_consumption")
     private Double maxConsumption;
+
     @Column(name = "min_consumption")
     private Double minConsumption;
+
     @Column(name = "avg_consumption")
     private Double avgConsumption;
+
     @Column(name = "serial_no_device")
     private Integer serialNoRpi;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 }
