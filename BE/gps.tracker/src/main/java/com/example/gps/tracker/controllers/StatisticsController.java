@@ -1,7 +1,6 @@
 package com.example.gps.tracker.controllers;
 
 import com.example.gps.tracker.models.CarStatistics;
-import com.example.gps.tracker.models.entities.Devices;
 import com.example.gps.tracker.services.StatisticsService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,9 +22,4 @@ public class StatisticsController {
     public CarStatistics getTotalStatistics(Timestamp timestamp, Integer userId) {
         return statisticsService.getTotalStatistics(timestamp, userId);
     }
-
-//    @GetMapping(value = "/averageFuelConsumption")
-//    public List<Devices> getAverageFuelConsumption(Timestamp timestamp, Integer userId) {
-//        return statisticsService.getAverageFuelConsumption(timestamp, userId);
-//    }
 }
