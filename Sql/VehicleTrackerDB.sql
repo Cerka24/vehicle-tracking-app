@@ -19,7 +19,7 @@ CREATE TABLE coordinates (
     longitude float,
 	latitude float,
 	speed float,
-	timestapm timestamp,
+	timestamp timestamp,
 	user_id int,
 	device_id int,
 	CONSTRAINT device_fk FOREIGN KEY (device_id) REFERENCES devices(id)
