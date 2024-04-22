@@ -16,16 +16,6 @@ API Specification:
 ERD
  
 
- 
-
-
-
-
-
-
-
-
-
 
 ![image](https://github.com/Cerka24/vehicle-tracking-app/assets/105603113/665b8492-74c6-4ba5-8ce5-dffc5a596e7b)
 <img width="330" alt="image" src="https://github.com/Cerka24/vehicle-tracking-app/assets/105603113/e388bdf1-8e2c-4a62-b48b-f6fe9c54c744">
