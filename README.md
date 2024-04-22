@@ -4,13 +4,21 @@ Vehicle Tracking Application
 API Specification:
 
 •	POST-COORDINATES (longitude, latitude, timestamp, speed, deviceId)
+
 •	POST-REGISTER (username, password)
+
 •	POST-DEVICE-REGISTER (maxConsumption, minConsumption, avgConsumption, serialNoRpi)
+
 •	POST-LOGIN (username, passeord(hashPassword))
+
 •	GET-TOTAL (Date, userID) – returns object (CarStatistics(avgFuelConsumption, avgKilometers, avgTimeUsage, avgSpeed)
+
 •	GET-AVERAGE-KM (Date, userID) – returns list of Objects(serialNoDevice, avgKilometersForThatDay) 
+
 •	GET-AVERAGE-SPEED (Date, userID) - returns list of Objects(serialNoDevice, avgSpeedForThatDay)
+
 •	GET-AVERAGE-TIMEUSAGE (Date, userID) - returns list of Objects(serialNoDevice, avgTimeUsageForThatDay)
+
 •	GET-AVERAGE-FUEL-CONSUMPTION (Date, userID) - returns list of Objects(serialNoDevice, avgFuelConsumptionForThatDay)
 
 ERD
