@@ -9,7 +9,7 @@ API Specification:
 
 •	POST-DEVICE-REGISTER (maxConsumption, minConsumption, avgConsumption, serialNoRpi)
 
-•	POST-LOGIN (username, passeord(hashPassword))
+•	POST-LOGIN (username, password(hashPassword))
 
 •	GET-TOTAL (Date, userID) – returns object (CarStatistics(avgFuelConsumption, avgKilometers, avgTimeUsage, avgSpeed)
 
