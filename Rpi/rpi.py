@@ -22,7 +22,7 @@ while True:
 
     # parse data
     newGPSData = gpsData.decode('latin-1')
-    if newGPSData[0:6] == "§GPRMC":
+    if newGPSData[0:6] == "$GPRMC":
         newData = pynmea2.parse(newGPSData)
 
         record = GPSData(
