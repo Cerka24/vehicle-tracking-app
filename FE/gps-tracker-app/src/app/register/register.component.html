@@ -1,0 +1,28 @@
+<div id="mainContainer">
+  <div>
+    <img id="image" src="https://www.svgrepo.com/download/103353/car.svg" alt="Car image"/>
+    <img id="image2" src="https://static.thenounproject.com/png/428613-200.png" alt="Location image">
+  </div>
+  <div >
+    <h1>Register</h1>
+  </div>
+  <div id="container">
+    <form [formGroup]="registerForm" (ngSubmit)="submit()">
+      <div>
+        <div>
+          <mat-form-field>
+            <mat-label>Username</mat-label>
+            <input type="text" [formControlName]="'userName'" matInput placeholder="Enter your user name" required>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <mat-label>Create password</mat-label>
+            <input type="password" [formControlName]="'password'" matInput placeholder="Enter your password" required>
+          </mat-form-field>
+        </div>
+        <button class="primary-button" mat-flat-button color="primary" type="submit">Register</button>
+      </div>
+    </form>
+  </div>
+</div>

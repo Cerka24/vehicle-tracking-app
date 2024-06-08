@@ -1,0 +1,60 @@
+<mat-toolbar>
+  <div>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon *ngIf="isLogged">menu</mat-icon>
+      <mat-icon>navigation</mat-icon>
+    </button>
+    <span>Vehicle Tracker</span>
+  </div>
+  <div>
+    <mat-icon>person</mat-icon>
+    <button class="register" mat-raised-button color="primary" *ngIf="isLogged">Register</button>
+    <button class="login" mat-raised-button color="primary" *ngIf="isLogged">Log in</button>
+  </div>
+</mat-toolbar>
+
+<div id="mainContent">
+  <div id="carCharacteristics">
+    <div class="vehicle">
+      <span>Vehicle brand: Chevrolet </span>
+    </div>
+    <div class="vehicle">
+      <span>Vehicle name: Aveo </span>
+    </div>
+    <div class="vehicle">
+      <span>Vehicle type: Coupe </span>
+    </div>
+    <div class="vehicle">
+      <span>Year of production: 2011 </span>
+    </div>
+  </div>
+
+  <div>
+    <table>
+      <table id="table">
+        <tr>
+          <th>Average distance travelled</th>
+          <th>Average fuel consumption</th>
+        </tr>
+        <tr>
+          <td>{{carStatistics.avgKilometers}}</td>
+          <td>{{carStatistics.averageFuelConsumption}}</td>
+        </tr>
+        <tr>
+          <th>Average speed</th>
+          <th>Average usage of device</th>
+        </tr>
+        <tr>
+          <td>{{carStatistics.averageSpeed}}</td>
+          <td>{{carStatistics.averageTimeUsage}}</td>
+        </tr>
+      </table>
+    </table>
+  </div>
+</div>
+
+<div class="chart-container">
+  <canvas  id="MyChart" >{{ chart }}</canvas>
+</div>
+
+<footer>&copy;VehicleTracker</footer>

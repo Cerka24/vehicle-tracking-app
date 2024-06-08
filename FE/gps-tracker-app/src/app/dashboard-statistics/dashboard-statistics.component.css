@@ -1,0 +1,76 @@
+#table {
+  border: 2px solid;
+  margin: 100px;
+  width: 100%;
+}
+
+#table th {
+  height: 70px;
+  border: 2px solid;
+  font-family: Verdana;
+}
+
+#table td {
+  background: royalblue;
+  height: 70px;
+  border: 2px solid;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+mat-toolbar span {
+  position: absolute;
+  padding-top: 10px;
+}
+
+.register {
+  margin: 10px;
+}
+
+.login {
+  margin: 10px;
+}
+
+.appName {
+  padding: 15px;
+  margin-top: 50px;
+}
+
+.name {
+  margin-top: 20px;
+}
+
+#mainContent {
+  display:flex;
+  justify-content: space-evenly;
+}
+
+#carCharacteristics {
+  margin-top: 100px;
+}
+
+.vehicle {
+  margin-top: 10px;
+  font-family: Verdana;
+  font-weight: bold;
+}
+
+.chart-container {
+  width: 80%;
+  height: 100%;
+  margin-left: 120px;
+  margin-bottom: -60px;
+}
+
+footer {
+  background: #f5f5f5;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+}

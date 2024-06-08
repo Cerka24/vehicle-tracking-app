@@ -1,0 +1,17 @@
+<mat-toolbar>
+  <div>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon *ngIf="isLogged">menu</mat-icon>
+      <mat-icon>navigation</mat-icon>
+    </button>
+    <span>Vehicle Tracker</span>
+  </div>
+  <div>
+    <mat-icon>person</mat-icon>
+    <button class="register" mat-raised-button color="primary" *ngIf="isLogged">Register</button>
+    <button class="login" mat-raised-button color="primary" *ngIf="isLogged">Log in</button>
+  </div>
+</mat-toolbar>
+<full-calendar id="fullCalendar" [options]="calendarOptions" ></full-calendar>
+
+<footer>&copy;VehicleTracker</footer>
