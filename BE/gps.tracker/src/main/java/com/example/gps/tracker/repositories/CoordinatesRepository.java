@@ -15,5 +15,9 @@ public interface CoordinatesRepository extends JpaRepository<com.example.gps.tra
     List<Coordinates> findByTimestampAndUsersIdd(Timestamp timestamp1, Long userId);
 
     @Query("select c from Coordinates c where c.usersId = ?3 and c.timestamp >= ?1 and c.timestamp < ?2")
+<<<<<<< HEAD
     List<Coordinates> findByTimestampAndUsersId(Timestamp timestamp1, Timestamp timestamp2, Long userId);;;
+=======
+    List<Coordinates> findByTimestampAndUsersId(Timestamp timestamp1, Timestamp timestamp2, Long userId);;
+>>>>>>> e57e4429828c9efefe3314e7b2e36f1d34664aa9
 }
