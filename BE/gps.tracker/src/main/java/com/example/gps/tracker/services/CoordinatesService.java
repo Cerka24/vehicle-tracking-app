@@ -34,6 +34,8 @@ public class CoordinatesService {
             coordinates.setLon(coordinatesDTO.getLon());
             coordinates.setSpeed(coordinatesDTO.getSpeed());
             coordinates.setTimestamp(coordinatesDTO.getTimestamp());
+            coordinates.setDate(coordinatesDTO.getDate());
+            coordinates.setTime(coordinatesDTO.getTime());
             coordinates.setDevice(devices);
 
             coordinatesRepository.save(coordinates);

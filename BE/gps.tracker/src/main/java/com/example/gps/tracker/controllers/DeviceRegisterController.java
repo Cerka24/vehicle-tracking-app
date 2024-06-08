@@ -19,8 +19,12 @@ public class DeviceRegisterController {
     public DeviceRegisterController(DeviceRegisterService deviceRegisterService) {
         this.deviceRegisterService = deviceRegisterService;
     }
+//    @PostMapping
+//    public List<Devices> deviceRegistration(@RequestBody List<DevicesDTO> devicesDTOList) {
+//        return deviceRegisterService.deviceRegistration(devicesDTOList);
+//    }
     @PostMapping
-    public List<Devices> deviceRegistration(@RequestBody List<DevicesDTO> devicesDTOList) {
-        return deviceRegisterService.deviceRegistration(devicesDTOList);
+    public Devices deviceRegistration(@RequestBody DevicesDTO devicesDTO) {
+        return deviceRegisterService.deviceRegistration(devicesDTO);
     }
 }

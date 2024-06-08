@@ -6,7 +6,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.sql.Time;
 import java.sql.Timestamp;
+import java.util.Date;
 
 @Entity
 @Table(name = "coordinates")
@@ -37,4 +39,10 @@ public class Coordinates {
     @ManyToOne
     @JoinColumn(name = "device_id")
     private Devices device;
+
+    @Column(name = "date")
+    private Date date;
+
+    @Column(name = "time")
+    private Time time;
 }

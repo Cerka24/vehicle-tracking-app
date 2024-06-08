@@ -4,7 +4,8 @@ import lombok.Data;
 
 @Data
 public class CarStatistics {
-    private DevicesDTO devicesDTO;
-    private Double travelledDistance;
+    private Double avgKilometers;
     private Double averageTimeUsage;
+    private Double averageSpeed;
+    private Double averageFuelConsumption;
 }
