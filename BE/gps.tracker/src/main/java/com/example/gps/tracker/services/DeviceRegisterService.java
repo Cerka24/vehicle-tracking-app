@@ -3,10 +3,8 @@ package com.example.gps.tracker.services;
 import com.example.gps.tracker.models.DevicesDTO;
 import com.example.gps.tracker.models.entities.Devices;
 import com.example.gps.tracker.models.entities.User;
-import com.example.gps.tracker.models.entities.Vehicle;
-import com.example.gps.tracker.repositories.UserRepository;
 import com.example.gps.tracker.repositories.DeviceRepository;
-import com.example.gps.tracker.repositories.VehicleRepository;
+import com.example.gps.tracker.repositories.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
