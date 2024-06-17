@@ -8,8 +8,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-
 @RequestMapping(value = "/deviceRegistration")
 @RestController
 public class DeviceRegisterController {
@@ -19,10 +17,6 @@ public class DeviceRegisterController {
     public DeviceRegisterController(DeviceRegisterService deviceRegisterService) {
         this.deviceRegisterService = deviceRegisterService;
     }
-//    @PostMapping
-//    public List<Devices> deviceRegistration(@RequestBody List<DevicesDTO> devicesDTOList) {
-//        return deviceRegisterService.deviceRegistration(devicesDTOList);
-//    }
     @PostMapping
     public Devices deviceRegistration(@RequestBody DevicesDTO devicesDTO) {
         return deviceRegisterService.deviceRegistration(devicesDTO);
