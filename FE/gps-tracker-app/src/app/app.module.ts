@@ -20,6 +20,8 @@ import {FullCalendarModule} from "@fullcalendar/angular";
 import { DashboardStatisticsComponent } from './dashboard-statistics/dashboard-statistics.component';
 import {MatTableModule} from "@angular/material/table";
 import { AvgKilometersComponent } from './avg-kilometers/avg-kilometers.component';
+import { OpenStreetMapComponent } from './open-street-map/open-street-map.component';
+import { VehicleRegistrationComponent } from './vehicle-registration/vehicle-registration.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { AvgKilometersComponent } from './avg-kilometers/avg-kilometers.componen
     CalendarComponent,
     DeviceRegistrationComponent,
     DashboardStatisticsComponent,
-    AvgKilometersComponent
+    AvgKilometersComponent,
+    OpenStreetMapComponent,
+    VehicleRegistrationComponent
   ],
     imports: [
         BrowserModule,

@@ -36,7 +36,7 @@ export class DeviceRegistrationComponent implements OnInit {
       console.log(this.deviceRegisterForm.value);
       console.log(JSON.stringify(data));
 
-      this.router.navigate(["/calendar"]);
+      this.router.navigate(["/vehicleRegistration"]);
 
     }, error => {
       this._snackBar.open("Unable to register car details", '', {

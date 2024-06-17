@@ -15,6 +15,7 @@ export class DeviceRegistrationService {
   deviceRegistration(devices: DeviceModel): Observable<DeviceModel> {
     let userId = localStorage.getItem('userId')
     devices.userId = Number(userId);
+    localStorage.setItem("deviceId", String (devices.serialNoRpi))
     return this.http.post<DeviceModel>(`${this.baseUrl}/deviceRegistration`,devices);
   }
 }

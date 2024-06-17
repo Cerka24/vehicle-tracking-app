@@ -16,16 +16,16 @@
 <div id="mainContent">
   <div id="carCharacteristics">
     <div class="vehicle">
-      <span>Vehicle brand: Chevrolet </span>
+      <span>Vehicle brand: {{vehicle.vehicleBrand}} </span>
     </div>
     <div class="vehicle">
-      <span>Vehicle name: Aveo </span>
+      <span>Vehicle name: {{vehicle.vehicleName}} </span>
     </div>
     <div class="vehicle">
-      <span>Vehicle type: Coupe </span>
+      <span>Vehicle type: {{vehicle.vehicleType}} </span>
     </div>
     <div class="vehicle">
-      <span>Year of production: 2011 </span>
+      <span>Year of production: {{vehicle.yearOfProduction}} </span>
     </div>
   </div>
 
@@ -37,24 +37,41 @@
           <th>Average fuel consumption</th>
         </tr>
         <tr>
-          <td>{{carStatistics.avgKilometers}}</td>
-          <td>{{carStatistics.averageFuelConsumption}}</td>
+          <td>{{carStatistics.avgKilometers}} km</td>
+          <td>{{carStatistics.averageFuelConsumption}} l</td>
         </tr>
         <tr>
           <th>Average speed</th>
           <th>Average usage of device</th>
         </tr>
         <tr>
-          <td>{{carStatistics.averageSpeed}}</td>
-          <td>{{carStatistics.averageTimeUsage}}</td>
+          <td>{{carStatistics.averageSpeed}} km/h</td>
+          <td>{{carStatistics.averageTimeUsage}} h</td>
         </tr>
       </table>
     </table>
   </div>
+  <app-open-street-map></app-open-street-map>
 </div>
 
-<div class="chart-container">
-  <canvas  id="MyChart" >{{ chart }}</canvas>
+<div class="diagrams-grid">
+  <div class="content">
+    <div class="chart-container">
+      <canvas  id="MyChartAvgKilometers" >{{ chart }}</canvas>
+    </div>
+    <div class="chart-container">
+      <canvas  id="MyChartAvgSpeed" >{{ chart }}</canvas>
+    </div>
+  </div>
+  <div class="content">
+    <div class="chart-container">
+      <canvas  id="MyChartAvgTimeUsage" >{{ chart }}</canvas>
+    </div>
+    <div class="container">
+      <canvas  id="MyChartAvgFuelConsumption" >{{ chart }}</canvas>
+    </div>
+  </div>
 </div>
+
 
 <footer>&copy;VehicleTracker</footer>

@@ -6,6 +6,7 @@ import {LogInComponent} from "./log-in/log-in.component";
 import {CalendarComponent} from "./calendar/calendar.component";
 import {DeviceRegistrationComponent} from "./device-registration/device-registration.component";
 import {DashboardStatisticsComponent} from "./dashboard-statistics/dashboard-statistics.component";
+import {VehicleRegistrationComponent} from "./vehicle-registration/vehicle-registration.component";
 
 const routes: Routes = [
   {
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path: "deviceRegistration",
     component: DeviceRegistrationComponent
+  },
+  {
+    path: "vehicleRegistration",
+    component: VehicleRegistrationComponent
   },
   {
     path: "calendar",

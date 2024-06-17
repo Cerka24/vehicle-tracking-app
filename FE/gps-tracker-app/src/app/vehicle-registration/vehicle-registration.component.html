@@ -1,0 +1,41 @@
+<div id="mainContainer">
+  <div>
+    <img id="image" src="https://www.svgrepo.com/download/103353/car.svg" alt="Car image"/>
+    <img id="image2" src="https://static.thenounproject.com/png/428613-200.png" alt="Location image">
+  </div>
+  <div>
+    <h1>Register your vehicle</h1>
+  </div>
+  <div id="container">
+    <form [formGroup]="vehicleRegistrationForm" (ngSubmit)="submit()">
+      <div>
+        <div>
+          <mat-form-field>
+            <mat-label>Vehicle brand</mat-label>
+            <input type="text" [formControlName]="'vehicleBrand'" matInput placeholder="Enter your vehicle brand">
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <mat-label>Vehicle name</mat-label>
+            <input type="text" [formControlName]="'vehicleName'" matInput placeholder="Enter your vehicle name">
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <mat-label>Vehicle type</mat-label>
+            <input type="text" [formControlName]="'vehicleType'" matInput placeholder="Enter your average vehicle type">
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <mat-label>Vehicle year of production</mat-label>
+            <input type="text" [formControlName]="'yearOfProduction'" matInput placeholder="Enter vehicle year of production">
+          </mat-form-field>
+        </div>
+        <button class="primary-button" mat-flat-button color="primary" type="submit">Register</button>
+      </div>
+    </form>
+  </div>
+</div>
+
